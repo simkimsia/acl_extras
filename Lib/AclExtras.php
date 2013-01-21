@@ -101,15 +101,22 @@ class AclExtras extends Object {
 		}
 	}
 
+// @codingStandardsIgnoreStart
+
 /**
  * Sync the ACO table
  *
  * @return void
  **/
 	public function aco_sync($params = array()) {
+
+// @codingStandardsIgnoreEnd
+
 		$this->_clean = true;
 		$this->aco_update($params);
 	}
+
+// @codingStandardsIgnoreStart
 
 /**
  * Updates the Aco Tree with new controller actions.
@@ -117,6 +124,9 @@ class AclExtras extends Object {
  * @return void
  **/
 	public function aco_update($params = array()) {
+
+// @codingStandardsIgnoreEnd
+
 		$root = $this->_checkNode($this->rootNode, $this->rootNode, null);
 
 		if (empty($params['plugin'])) {
